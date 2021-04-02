@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  msusuario:
+    build: .
+    image: fecsta/user-services:latest
+    ports: 
+    - 8090:8090
+    restart: always
+
+  msonibus:
+    build: .
+    image: fecsta/mytransport-onibus:latest
+    ports: 
+    - 8080:8080
+    restart: always
+
